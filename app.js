@@ -24,29 +24,27 @@ function createMeal(meal) {
 
 
     mealContainer.innerHTML = ` 
-        <div class="row">
-            <div class="columns five">
-                <img src="${meal.strMealThumb}" alt="Meal Image"/>
-                <p><strong>Category:</strong> ${meal.strCategory}</p>
-                <p><strong>Area:</strong> ${meal.strArea}</p>
-                <p><strong>Tags:</strong> ${meal.strTags.split(',').join(', ')}</p>
+        <div style="display:flex; margin-left: 10%; margin-right: 10%;">
 
-                <h5>Ingredients</h5>
-                <ul>
+            <div class="img-h4" style="width: 50%;">
+                <h4 style="color: black;">${meal.strMeal}</h4>
+                <img src="${meal.strMealThumb}" alt="Meal Image"/>
+            </div>
+
+            <div style="padding-left: 50px; padding-top: 30px; width: 50%;">
+                <h5 style="color: black; padding-left: 17px;">Ingredients</h5>
+                <ul style="padding-top: 10px; margin-top: -10px;">
                     ${ingredients.map(ingredients => `
-                        <li>${ingredients}</li>
-                    `).join('')}
+                        <li style="color: black;">${ingredients}</li>
+                        `).join('')}
                 </ul>
             </div>
-            <div class="columns seven">
-                <h4>${meal.strMeal}</h4>
-                <p>${meal.strInstructions}</p>
+
             </div>
-        </div>
-        <div class="row">
-            <h5>Video Recipe</h5>
+        <div>
+            <h5 style="text-align: center; margin-bottom: 0px;">Video Recipe</h5>
             <div class="videoWrapper">
-                <iframe src="https://www.youtube.com/embed/${meal.strYoutube.slice(-11)}" />
+                <iframe src="https://www.youtube.com/embed/${meal.strYoutube.slice(-11)}"  />
             </div>
         </div>
      `; 
