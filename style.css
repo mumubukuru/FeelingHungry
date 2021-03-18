@@ -9,8 +9,6 @@
 }
 
 body {
-	width: 944px; 
-	height: 1301px;
 	margin-right: 0px;
 }
 
@@ -87,6 +85,12 @@ li {
 	height: 100%;
 }
 
+.inner-html {
+	display:flex; 
+	margin-left: 10%; 
+	margin-right: 10%;
+}
+
 
 @media screen and (max-width: 800px) {
 	html, body {
@@ -153,4 +157,31 @@ li {
 	}
 
 
-}		
+}
+
+@media only screen and (min-width: 900px) {
+	.container {
+		margin-left: 0px;
+	}
+
+	.inner-html {
+		margin-left: 25%;
+		margin-right: 0;
+		width: 764.8px;
+		justify-content: space-between;
+		
+	}
+
+	.video-wrapper-div h5 {
+		margin-left: -655px;
+	}
+
+	.video-wrapper-div {
+		width: 50%;
+		margin-left: 20%;
+	}
+
+	.video-wrapper-div iframe {
+
+	}
+}

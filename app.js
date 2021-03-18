@@ -24,7 +24,7 @@ function createMeal(meal) {
 
 
     mealContainer.innerHTML = ` 
-        <div class="inner-html" style="display:flex; margin-left: 10%; margin-right: 10%;">
+        <div class="inner-html">
 
             <div class="food-name-image" class="img-h4" style="width: 50%;">
                 <h4 style="color: black;">${meal.strMeal}</h4>
