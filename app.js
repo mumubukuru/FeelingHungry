@@ -24,14 +24,14 @@ function createMeal(meal) {
 
 
     mealContainer.innerHTML = ` 
-        <div style="display:flex; margin-left: 10%; margin-right: 10%;">
+        <div class="inner-html" style="display:flex; margin-left: 10%; margin-right: 10%;">
 
-            <div class="img-h4" style="width: 50%;">
+            <div class="food-name-image" class="img-h4" style="width: 50%;">
                 <h4 style="color: black;">${meal.strMeal}</h4>
                 <img src="${meal.strMealThumb}" alt="Meal Image"/>
             </div>
 
-            <div style="padding-left: 50px; padding-top: 30px; width: 50%;">
+            <div class="ingredients-div" style="padding-left: 50px; padding-top: 30px; width: 50%;">
                 <h5 style="color: black; padding-left: 17px;">Ingredients</h5>
                 <ul style="padding-top: 10px; margin-top: -10px;">
                     ${ingredients.map(ingredients => `
@@ -41,7 +41,7 @@ function createMeal(meal) {
             </div>
 
             </div>
-        <div>
+        <div class="video-wrapper-div">
             <h5 style="text-align: center; margin-bottom: 0px;">Video Recipe</h5>
             <div class="videoWrapper">
                 <iframe src="https://www.youtube.com/embed/${meal.strYoutube.slice(-11)}"  />
